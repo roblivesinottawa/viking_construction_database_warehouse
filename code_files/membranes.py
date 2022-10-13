@@ -18,11 +18,11 @@ data  = [
     
 ]
 
-with open('membrane.csv', 'w', encoding='UTF8', newline='') as file:
+with open('../csv_files/membrane.csv', 'w', encoding='UTF8', newline='') as file:
     writer = csv.writer(file)
 
     writer.writerow(header)
     writer.writerows(data)
 
-df = pd.read_csv('membrane.csv')
-df.to_excel('membrane_inventory.xlsx', index=None, header=True)
+df = pd.read_csv('../csv_files/membrane.csv')
+df.to_excel('../excel_files/membrane_inventory.xlsx', index=None, header=True)
